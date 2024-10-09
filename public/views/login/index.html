@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA DE LA</title> 
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/Cuar.css">
+</head>
+<body>
+<div id="app">
+    <div class="row">
+        <div class="col-md-4 mx-auto rounded border p-3">
+            <section>
+                <h2 class="text-center mb-3">Porfavor Introduzca su información</h2>
+                <hr />
+    
+                <form id="login">
+                    <div class="mb-3">
+                        <label class="form-label">USUARIO: </label>
+                        <input id="txt_username" class="form-control" />
+                        <span class="text-danger" id="span_user"></span>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label class="form-label">CONTRASEÑA: </label>
+                        <input id="txt_password" type="password" class="form-control" />
+                        <span id="span_password" class="text-danger"></span>
+                        <div id="password_errors" class="p-0">
+                        </div>
+                    </div>
+    
+                    <div class="row mb-3">
+                        <div class="col d-grid">
+                            <button id="SendFrom" type="button" class="btn btn-primary" onclick="validar();">Entrar</button>
+                        </div>
+                        <div class="col d-grid">
+                            <button class="btn btn-outline-primary" type="reset">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row modal" id="modal">
+            <div class="fondoModal" id="fondoModal"></div>
+            <div class="modal-content col-md-4 mx-auto rounded border p-3">
+                <section class="modal-body" id="modal-body">
+                    <h2 class="text-center mb-3">Escriba el texto de la imagen por favor</h2>
+                    <hr />
+                    <div class="text-center mb-3"><img width="200"></div>
+                    <div class="mb-3">
+                        <input type="text" id="txt_captcha" class="form-control">
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col d-grid">
+                            <button class="btn btn-primary" onclick="javascript:Captched()">Aceptar</button>
+                        </div>
+                        <div class="col d-grid">
+                            <button class="btn-close-modal btn btn-outline-primary" type="reset" id="close_modal">Cerrar</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/validaciones.js"></script>
+</body>
+</html>
