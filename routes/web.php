@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\UsuariosController;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,5 @@ Route::get('/Usuarios/Editar',[UsuariosController::class,'Edit']);
 Route::get('/Productos',[ProductosController::class,'index']);
 
 Route::get('/Productos/Crear',[ProductosController::class,'Create']);
+
+Route::get('/Productos/Editar',[ProductosController::class,'Edit']);

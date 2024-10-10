@@ -28,9 +28,21 @@ document.addEventListener('DOMContentLoaded', function(event){
 });
 
 function Edit(id){
-
+    window.location.href='/Productos/Editar?id='+id;
 }
 
 function Delete(id){
-    
+    const check = confirm('¿Esta seguro de eliminar este producto?');
+
+    if(check){
+        fetch('/api/Productos/Delete/'+id,{method:"DELETE"})
+        .then(res=>{
+        if(res.ok){
+            console.log('Registro Eliminado');
+            window.location.href='/Productos';
+        }
+        else{
+            console.log('Error de borrado');
+        }});
+    }
 }

@@ -56,8 +56,6 @@ class UsuariosController extends Controller
             return response()->json($usuario,201);
         }
         return response()->json(['message' => 'Usuario no encontrado'], 404);
-
-        return view();
     }
 
     public function Delete($idUsuario){

@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\UsuariosController;
+use App\Models\Producto;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,3 +27,11 @@ Route::get('/Usuarios/{id}',[UsuariosController::class,'getById']);
 Route::put('/Usuarios/Edit/{id}',[UsuariosController::class,'Update']);
 
 Route::get('/Productos',[ProductosController::class,'getAll']);
+
+Route::post('/Productos/Create',[ProductosController::class,'Insert']);
+
+Route::delete('/Productos/Delete/{id}',[ProductosController::class,'Delete']);
+
+Route::get('/Productos/{id}',[ProductosController::class,'getById']);
+
+Route::put('/Productos/Edit/{id}',[ProductosController::class,'Update']);
