@@ -53,8 +53,8 @@ function Captched() {
     let text = document.querySelector("#txt_captcha").value;
     console.log(captcha);
     if (text === captcha) {
-        alert("Captcha correcto");
-        //window.location.href = '/';
+        //alert("Captcha correcto");
+        window.location.href = '/Usuarios';
     }
     else {
         alert("texto incorrecto");

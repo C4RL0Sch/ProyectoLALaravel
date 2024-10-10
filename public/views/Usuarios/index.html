@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yiel('title','CRUD')</title>
+    <title>Lista de Usuarios</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container-fluid">
@@ -21,27 +21,54 @@
                         <a class="nav-link text-dark">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="/">Usuarios</a>
+                        <a class="nav-link text-dark" href="/Usuarios">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="/">Productos</a>
+                        <a class="nav-link text-dark" href="/Productos">Productos</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<div class="container">
+<div class="container flex-grow-1">
     <main role="main" class="pb-3">
-        @yield('content') <!-- Aquí se inyecta el contenido específico de cada vista -->
-    </main>
+    <h1 class="text-center mb-5">USUARIOS</h1>
+
+    <div class="row mb-5">
+        <div class="col">
+            <a class="btn btn-primary" href="/Usuarios/Crear">Agregar Usuario</a>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Clave</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody id="Tbody">
+        </tbody>
+    </table>
+</main>
 </div>
 
-<footer class="border-top footer text-muted">
+<footer class="border-top footer text-muted mt-auto py-3">
     <div class="container">
         &copy; 2024 - ProyectoLA2 - <a>Privacy</a>
     </div>
 </footer>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/Usuarios/index.js"></script>
 </body>
 </html>

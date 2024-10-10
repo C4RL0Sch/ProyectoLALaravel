@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuarios</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand">ProyectoLA2</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/">Productos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container flex-grow-1">
+    <main role="main" class="pb-3">
+        <div class="row">
+            <div class="col-md-8 mx-auto rounded border p-3">
+                <h2 class="text-center mb-5">Agregar Usuario</h2>
+        
+                <form id="CreateForm">
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Nombre:</label>
+                        <div class="col-sm-8">
+                            <input name="nombre" class="form-control"/>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Apellido Paterno:</label>
+                        <div class="col-sm-8">
+                            <input name="A_Paterno" class="form-control" />
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Apellido Materno:</label>
+                        <div class="col-sm-8">
+                            <input name="A_Materno" class="form-control" />
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Clave:</label>
+                        <div class="col-sm-8">
+                            <input name="Clave" class="form-control" />
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Teléfono:</label>
+                        <div class="col-sm-8">
+                            <input name="Telefono" class="form-control" />
+                            <span  class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Correo:</label>
+                        <div class="col-sm-8">
+                            <input name="Correo" class="form-control" />
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-sm-4 col-sm-4 d-grid">
+                            <button type="button" class="btn btn-primary" onclick="Guardar()">Guardar</button>
+                        </div>
+                        <div class="col-sm-4 d-grid">
+                            <a class="btn btn-outline-primary" role="button">Cancelar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer class="border-top footer text-muted mt-auto py-3">
+    <div class="container">
+        &copy; 2024 - ProyectoLA2 - <a>Privacy</a>
+    </div>
+</footer>
+<script src="/js/Usuarios/create.js"></script>
+</body>
+</html>
